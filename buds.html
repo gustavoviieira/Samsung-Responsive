@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="buds.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <title>Samsung</title>
+    </head>
+</head>
+<body class="colorChange">
+    <header>
+        <nav class="navigation">
+            <a href="index.html"><img src="img/logo.png" alt="Logo do Samsung" class="logo"></a>
+            <ul class="menuu">
+                <li><a href="#">News</a></li>
+                <li><a href="dobraveis.html">Galaxy Dobráveis</a></li>
+                <li><a href="index.html">Samsung</a></li>
+                <li><a href="watch.html">Smart Watch</a></li>
+                <li><a href="#"class="check">Buds</a></li>
+                <li><a href="#">Suporte</a></li>
+            </ul>
+            <div class="toggle" onclick="toggleMenu();"></div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="main-text">
+            <h3>Uma audição<br>Digna de estúdio</h3>
+            <p>
+                Cancelamento de Ruído Inteligente (ANC)<br>
+                O <strong>Buds 2 pro</strong> tem áudio de alta-fidelidade 24bit<br>
+                Design compacto e ergonômico para maior conforto<br>
+                Resistência à água categoria IPX7 
+            </p>
+            </div>
+        </section>
+        <aside>
+            <div class="main-img">
+                <img src="img/brose.png" alt="Imagem do buds" id="phone">
+            </div>
+        </aside>
+        <div class="text">
+            <h6>A partir de $230</h6>
+            <a href="#" class="btn">Comprar</a>
+            <h5>Escolha sua cor favorita:</h5>
+        </div>
+        <div class="content">
+            <span id="rose" onclick="imgSlider('img/brose.png');backgroundChange('#D2C5E1')"></span>
+            <span id="white" onclick="imgSlider('img/bwhite.png');backgroundChange('#F5F5F5')"></span>
+            <span id="black" onclick="imgSlider('img/bblack.png');backgroundChange('#75767A')"></span>
+        </div>
+        <script>
+            /*Função de mudar o celular*/
+       function imgSlider(e){
+       document.querySelector('#phone').src = e;
+       }
+       /*Função de mudar a cor do circulo*/
+       function backgroundChange(color){
+       const colorChange = document.querySelector('.colorChange');
+       colorChange.style.background = color;
+       
+       const btn = document.querySelector('.btn');
+       btn.style.background = color;
+       }
+       
+       function toggleMenu(){
+       const menuToggle = document.querySelector('.toggle')
+       const menuu = document.querySelector('.menuu')
+       menuToggle.classList.toggle('active')
+       menuu.classList.toggle('active')
+       }
+       </script>
+    </main>
+</body>
+</html>

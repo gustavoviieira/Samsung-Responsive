@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="dobravel.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <title>Samsung</title>
+    </head>
+<body class="colorChange">
+    <header>
+        <nav class="navigation">
+            <a href="index.html"><img src="img/logo.png" alt="Logo do Samsung" class="logo"></a>
+            <ul class="menuu">
+                <li><a href="#">News</a></li>
+                <li><a href="#" class="check">Galaxy Dobráveis</a></li>
+                <li><a href="index.html">Samsung</a></li>
+                <li><a href="watch.html">Smart Watch</a></li>
+                <li><a href="buds.html">Buds</a></li>
+                <li><a href="#">Suporte</a></li>
+            </ul>
+            <div class="toggle" onclick="toggleMenu();"></div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="main-text">
+            <h3>Inacreditável<br>Design inquebrável</h3>
+            <p>
+                Os primeiros dobráveis que podem levar água</br>
+                O <strong>Z flip 4</strong> conta com tela com 120Hz<br>
+                Câmera de nível profissional<br> Dobre seu mundo
+            </p>
+            </div>
+        </section>
+        <aside>
+            <div class="main-img">
+              <img src="img/zblack.png" alt="Imagem do zrose" id="phone">
+            </div>
+        </aside>
+        <div class="text">
+            <h6>A partir de $999</h6>
+            <a href="#" class="btn">Comprar</a>
+            <h5>Escolha sua cor favorita:</h5>
+        </div>
+        <div class="content">
+            <span id="black" onclick="imgSlider('img/zblack.png'); backgroundChange('#24272C')"></span>
+            <span id="rose" onclick="imgSlider('img/zrose.png'); backgroundChange('#EFD7D0')"></span>
+            <span id="blue" onclick="imgSlider('img/zblue.png'); backgroundChange('#BFCBDF')"></span>
+            <span id="violeta" onclick="imgSlider('img/zvioleta.png'); backgroundChange('#C0B3CF')"></span>
+        </div>
+        <script>
+             /*Função de mudar o celular*/
+        function imgSlider(e){
+        document.querySelector('#phone').src = e;
+        }
+        /*Função de mudar a cor do circulo*/
+        function backgroundChange(color){
+        const colorChange = document.querySelector('.colorChange');
+        colorChange.style.background = color;
+        
+        const btn = document.querySelector('.btn');
+        btn.style.background = color;
+        }
+        
+        function toggleMenu(){
+        const menuToggle = document.querySelector('.toggle')
+        const menuu = document.querySelector('.menuu')
+        menuToggle.classList.toggle('active')
+        menuu.classList.toggle('active')
+        }
+        </script>
+    </main>
+</body>
+</html>

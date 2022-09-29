@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <title>Samsung</title>
+   </head>
+<body class="colorChange">
+    <header>
+        <nav class="navigation">
+            <a href="index.html"><img src="img/logo.png" alt="Logo do Samsung" class="logo"></a>
+            <ul class="menuu">
+                <li><a href="#">News</a></li>
+                <li><a href="dobraveis.html">Galaxy Dobráveis</a></li>
+                <li><a href="#" class="check">Samsung</a></li>
+                <li><a href="watch.html">Smart Watch</a></li>
+                <li><a href="buds.html">Buds</a></li>
+                <li><a href="#">Suporte</a></li>
+            </ul>
+            <div class="toggle" onclick="toggleMenu();"></div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="main-text">
+            <h3>Seu novo <br>Superpoder</h3>
+            <p>
+                Câmera com Super Zoom impressionante<br> 
+                Um aumento notável na duração da bateria<br>
+                E novos recursos da nova One Ui 5.0<br>
+                No <strong>S22 Ultra</strong> você faz coisas que nunca pôde
+            </p>
+            </div>
+        </section>
+        <aside>
+            <div class="main-img">
+                <img src="img/black.png" alt="Imagem do Samsung" id="phone">
+            </div>
+        </aside>
+        <div class="text">
+            <h6>A partir de $1.599</h6>
+            <a href="#" class="btn">Comprar</a>
+            <h5>Escolha sua cor favorita:</h5>
+        </div>
+        <div class="content">
+            <span id="black" onclick="imgSlider('img/black.png');backgroundChange('#2B2B2D')"></span>
+            <span id="rose" onclick="imgSlider('img/rose.png');backgroundChange('#79535b')"></span>
+            <span id="white" onclick="imgSlider('img/white.png');backgroundChange('#F7F7F7')"></span>
+            <span id="green" onclick="imgSlider('img/green.png');backgroundChange('#4A625C')"></span>          
+        </div>
+        <script>
+            /*Função de mudar o celular*/
+       function imgSlider(e){
+       document.querySelector('#phone').src = e;
+       }
+       /*Função de mudar a cor do circulo*/
+       function backgroundChange(color){
+       const colorChange = document.querySelector('.colorChange');
+       colorChange.style.background = color;
+       
+       const btn = document.querySelector('.btn');
+       btn.style.background = color;
+       }
+       
+       function toggleMenu(){
+       const menuToggle = document.querySelector('.toggle')
+       const menuu = document.querySelector('.menuu')
+       menuToggle.classList.toggle('active')
+       menuu.classList.toggle('active')
+       }
+       </script>
+    </main>
+</body>
+</html>
